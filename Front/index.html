@@ -221,10 +221,106 @@
         </div>
     </section>
 
-    <section id="playlist">
-        <h2>Nossa Trilha Sonora</h2>
-        <div class="playlist-container">
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DX1ngE6vAd9Ym?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <section id="filmes">
+        <h2>Filmes que me lembram você</h2>
+        <p style="text-align: center; color: var(--text-muted); margin: -30px auto 40px auto; max-width: 600px;">
+            Cada cena, cada história e cada trilha sonora me faz pensar no roteiro lindo que estamos escrevendo juntos.
+        </p>
+
+        <div class="movie-grid">
+            <div class="movie-card">
+                <img src="/Src/Como_Se_Fosse_A_Primeira_Vez.jpg" alt="Como se fosse a primeira vez" class="movie-poster">
+                <div class="movie-overlay">
+                    <div class="movie-info">
+                        <h4>Como Se Fosse a Primeira Vez</h4>
+                        <p>Porque ele me lembra de como eu encontro motivos para me apaixonar por você todos os dias, de novo e de novo.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="movie-card">
+                <img src="/Src/Filme_De_Gay.jpg" alt="Questão de Tempo" class="movie-poster">
+                <div class="movie-overlay">
+                    <div class="movie-info">
+                        <h4>heartstopper</h4>
+                        <p>Para me lembrar de valorizar cada pequeno segundo ao seu lado, como se eu pudesse voltar no tempo só para reviver nosso dia.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="movie-card">
+                <img src="/Src/Dan_Da_Dan.jpg" alt="Diário de uma Paixão" class="movie-poster">
+                <div class="movie-overlay">
+                    <div class="movie-info">
+                        <h4>Dan Da Dan</h4>
+                        <p>Porque o nosso amor tem aquela força rara que supera o tempo e qualquer obstáculo. É o meu clássico favorito.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="movie-card">
+                <img src="/Src/Se_A_Vida_Te_Der_Tangirina.jpg" alt="Para Todos os Garotos" class="movie-poster">
+                <div class="movie-overlay">
+                    <div class="movie-info">
+                        <h4>Se a Vida Te Der Tangerinas</h4>
+                        <p>Pela doçura das cartas e pela forma como um sentimento inesperado se tornou a história mais importante da minha vida.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <section id="playlist">
+        <h2>Músicas que me fazem pensar em você</h2>
+        <p style="text-align: center; color: var(--text-muted); margin: -30px auto 40px auto; max-width: 600px;">
+            Cada melodia e cada letra parece ter sido escrita sob medida para contar um pedacinho do que sinto por você.
+        </p>
+
+        <div class="music-grid">
+            <a href="https://www.youtube.com/watch?v=9bgyuqM4LcU" target="_blank" class="music-card">
+                <div class="album-cover-wrapper">
+                    <img src="/Src/Tribalista.jpg" alt="Capa De Janeiro a Janeiro" class="album-cover">
+                    <div class="album-play-overlay">
+                        <i data-lucide="play" size="18"></i>
+                    </div>
+                </div>
+                <div class="music-details">
+                    <h4>Aliança</h4>
+                    <span>Roberta Campos (part. Nando Reis)</span>
+                    <p>"Não há quem mude o que já estava escrito... Eu te amo de janeiro a janeiro, até o fim do mundo."</p>
+                </div>
+                <div class="music-badge">Ouvir</div>
+            </a>
+
+            <a href="https://www.youtube.com/watch?v=3AtDnEC4zak" target="_blank" class="music-card">
+                <div class="album-cover-wrapper">
+                    <img src="https://i.scdn.co/image/ab67616d0000b2735169a9b6b7a9562725832a89" alt="Capa Your Song" class="album-cover">
+                    <div class="album-play-overlay">
+                        <i data-lucide="play" size="18"></i>
+                    </div>
+                </div>
+                <div class="music-details">
+                    <h4>Your Song</h4>
+                    <span>Elton John</span>
+                    <p>"Como é maravilhosa a vida desde que você apareceu no mundo."</p>
+                </div>
+                <div class="music-badge">Ouvir</div>
+            </a>
+
+            <a href="https://www.youtube.com/watch?v=0yW7w8F2TVA" target="_blank" class="music-card">
+                <div class="album-cover-wrapper">
+                    <img src="https://i.scdn.co/image/ab67616d0000b273ec6f2c51ec306b9b389656fb" alt="Capa All of Me" class="album-cover">
+                    <div class="album-play-overlay">
+                        <i data-lucide="play" size="18"></i>
+                    </div>
+                </div>
+                <div class="music-details">
+                    <h4>All of Me</h4>
+                    <span>John Legend</span>
+                    <p>"Porque tudo de mim ama tudo de você. Ama suas curvas e todas as suas imperfeições."</p>
+                </div>
+                <div class="music-badge">Ouvir</div>
+            </a>
         </div>
     </section>
 
@@ -240,7 +336,7 @@
         // --- SISTEMA DO CONTADOR DE TEMPO ---
         // Altere a data abaixo para o dia exato em que vocês começaram a namorar
         // Formato: Ano, Mês (0-11), Dia, Hora, Minuto
-        const dataInicio = new Date(2024, 9, 12, 20, 0, 0); 
+        const dataInicio = new Date(2025, 4, 18, 16, 0, 0); 
 
         function atualizarContador() {
             const agora = new Date();
@@ -265,16 +361,13 @@
         }
 
         // --- ANIMAÇÃO SUAVE DA CARTA (REVELAR AO SCROLL) ---
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.2 });
+        // --- INTERAÇÃO DOS CARDS DE MOTIVOS (ABRE E FECHA) ---
+function toggleCard(card) {
+    // Se você quiser que apenas UM card fique aberto por vez, desative a linha abaixo:
+    // document.querySelectorAll('.card').forEach(c => { if(c !== card) c.classList.remove('active'); });
 
-        observer.observe(document.getElementById('love-letter-box'));
-
+    card.classList.toggle('active');
+}
         // --- EFEITO SURPRESA (CORAÇÕES ANIMADOS) ---
         function triggerSurprise(e) {
             for (let i = 0; i < 35; i++) {
