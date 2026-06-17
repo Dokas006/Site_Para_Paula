@@ -16,12 +16,14 @@
 
     <canvas id="canvas-particles"></canvas>
 
-    <header class="hero">
+   <header class="hero">
         <h1>Para a pessoa mais especial da minha vida</h1>
         <p>Cada detalhe deste espaço foi feito para lembrar um pouquinho do amor imenso que sinto por você todos os dias.</p>
-        <a href="#historia" class="btn-premium">Nossa História</a>
+        
+        <a href="#historia" class="scroll-down-arrow" aria-label="Rolar para baixo">
+            <i data-lucide="chevron-down" size="36"></i>
+        </a>
     </header>
-
     <section id="historia">
         <h2>Nossa História</h2>
         
@@ -105,6 +107,21 @@
     </section>
 
     <hr style="border: 0; border-top: 1px solid var(--border-light); max-width: 80%;">
+        <section id="brincadeira">
+        <h2>Uma perguntinha rápida...</h2>
+        <div class="quiz-container">
+            <p class="quiz-question">Você me ama? 🥺</p>
+            
+            <div class="quiz-buttons">
+                <button id="btn-sim" class="btn-quiz sim" onclick="respostaSim()">Sim! ❤️</button>
+                <button id="btn-nao" class="btn-quiz nao" onclick="respostaNao()">Não</button>
+            </div>
+
+            <div id="mensagem-amor" class="love-message-hidden">
+                Eu também te amo infinitamente! Você é o amor da minha vida! 🥰✨
+            </div>
+        </div>
+    </section>
 
     <section id="galeria">
         <h2>Nossos Momentos</h2>
@@ -222,51 +239,53 @@
     </section>
 
     <section id="filmes">
-        <h2>Filmes que me lembram você</h2>
+        <h2>Filmes e Séries que me lembram você</h2>
         <p style="text-align: center; color: var(--text-muted); margin: -30px auto 40px auto; max-width: 600px;">
             Cada cena, cada história e cada trilha sonora me faz pensar no roteiro lindo que estamos escrevendo juntos.
         </p>
 
         <div class="movie-grid">
+            
             <div class="movie-card">
                 <img src="/Src/Como_Se_Fosse_A_Primeira_Vez.jpg" alt="Como se fosse a primeira vez" class="movie-poster">
                 <div class="movie-overlay">
                     <div class="movie-info">
                         <h4>Como Se Fosse a Primeira Vez</h4>
-                        <p>Porque ele me lembra de como eu encontro motivos para me apaixonar por você todos os dias, de novo e de novo.</p>
+                        <p>Porque ele me lembra que, não importa quantos dias passem, eu sempre vou encontrar um milhão de motivos diferentes para me apaixonar por você de novo, todos os dias.</p>
                     </div>
                 </div>
             </div>
 
             <div class="movie-card">
-                <img src="/Src/Filme_De_Gay.jpg" alt="Questão de Tempo" class="movie-poster">
+                <img src="/Src/Filme_De_Gay.jpg" alt="Heartstopper" class="movie-poster">
                 <div class="movie-overlay">
                     <div class="movie-info">
-                        <h4>heartstopper</h4>
-                        <p>Para me lembrar de valorizar cada pequeno segundo ao seu lado, como se eu pudesse voltar no tempo só para reviver nosso dia.</p>
+                        <h4>Heartstopper</h4>
+                        <p>Me lembra do lado mais puro, leve e confortável do nosso amor. Estar com você traz aquela sensação gostosa de calmaria e o quentinho no coração que a gente sente assistindo a essa história.</p>
                     </div>
                 </div>
             </div>
 
             <div class="movie-card">
-                <img src="/Src/Dan_Da_Dan.jpg" alt="Diário de uma Paixão" class="movie-poster">
+                <img src="/Src/Dan_Da_Dan.jpg" alt="Dan Da Dan" class="movie-poster">
                 <div class="movie-overlay">
                     <div class="movie-info">
                         <h4>Dan Da Dan</h4>
-                        <p>Porque o nosso amor tem aquela força rara que supera o tempo e qualquer obstáculo. É o meu clássico favorito.</p>
+                        <p>Porque, além de namorados, nós somos uma dupla imbatível. Lembra a nossa dinâmica: cheia de energia, momentos divertidos, uma parceria única e aquela cumplicidade onde um sempre protege o outro no caos.</p>
                     </div>
                 </div>
             </div>
             
             <div class="movie-card">
-                <img src="/Src/Se_A_Vida_Te_Der_Tangirina.jpg" alt="Para Todos os Garotos" class="movie-poster">
+                <img src="/Src/Se_A_Vida_Te_Der_Tangirina.jpg" alt="Se a Vida Te Der Tangerinas" class="movie-poster">
                 <div class="movie-overlay">
                     <div class="movie-info">
                         <h4>Se a Vida Te Der Tangerinas</h4>
-                        <p>Pela doçura das cartas e pela forma como um sentimento inesperado se tornou a história mais importante da minha vida.</p>
+                        <p>Pela doçura, pela nostalgia e pela beleza de construir uma vida juntos desde as pequenas coisas. Me lembra de como o nosso amor transforma os dias simples na história mais bonita e preciosa que eu já vivi.</p>
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -286,38 +305,38 @@
                 </div>
                 <div class="music-details">
                     <h4>Aliança</h4>
-                    <span>Roberta Campos (part. Nando Reis)</span>
-                    <p>"Não há quem mude o que já estava escrito... Eu te amo de janeiro a janeiro, até o fim do mundo."</p>
+                    <span>Tribalistas</span>
+                    <p>"Se um dia eu te encontrar Do jeito que sonhei Quem sabe ser seu par perfeito E te amar do jeito que eu imaginei"</p>
                 </div>
                 <div class="music-badge">Ouvir</div>
             </a>
 
-            <a href="https://www.youtube.com/watch?v=3AtDnEC4zak" target="_blank" class="music-card">
+            <a href="https://youtu.be/of90cUtjYTQ?si=MJ9wbFvRqU4-5ajp" target="_blank" class="music-card">
                 <div class="album-cover-wrapper">
-                    <img src="https://i.scdn.co/image/ab67616d0000b2735169a9b6b7a9562725832a89" alt="Capa Your Song" class="album-cover">
+                    <img src="/Src/Ainda_Bem.jpg" alt="Capa Your Song" class="album-cover">
                     <div class="album-play-overlay">
                         <i data-lucide="play" size="18"></i>
                     </div>
                 </div>
                 <div class="music-details">
-                    <h4>Your Song</h4>
-                    <span>Elton John</span>
-                    <p>"Como é maravilhosa a vida desde que você apareceu no mundo."</p>
+                    <h4>Ainda Bem</h4>
+                    <span>Marisa Monte</span>
+                    <p>"Ainda bem Que agora encontrei você Eu realmente não sei O que eu fiz pra merecer Você"</p>
                 </div>
                 <div class="music-badge">Ouvir</div>
             </a>
 
-            <a href="https://www.youtube.com/watch?v=0yW7w8F2TVA" target="_blank" class="music-card">
+            <a href="https://youtu.be/WuenyQ4NCQE?si=uaRqOQNEXY-esAIF" target="_blank" class="music-card">
                 <div class="album-cover-wrapper">
-                    <img src="https://i.scdn.co/image/ab67616d0000b273ec6f2c51ec306b9b389656fb" alt="Capa All of Me" class="album-cover">
+                    <img src="/Src/Garota_de_Ipanema.jpg" alt="Capa All of Me" class="album-cover">
                     <div class="album-play-overlay">
                         <i data-lucide="play" size="18"></i>
                     </div>
                 </div>
                 <div class="music-details">
-                    <h4>All of Me</h4>
-                    <span>John Legend</span>
-                    <p>"Porque tudo de mim ama tudo de você. Ama suas curvas e todas as suas imperfeições."</p>
+                    <h4>Garota de Ipanema</h4>
+                    <span>Antônio Carlos </span>
+                    <p>"Olha que coisa mais linda, mais cheia de graça É ela, menina, que vem e que passa Num doce balanço a caminho do mar."</p>
                 </div>
                 <div class="music-badge">Ouvir</div>
             </a>
@@ -325,7 +344,12 @@
     </section>
 
     <section class="final-section">
-        <p>Preparada para o nosso próximo capítulo?</p>
+        <p style="font-family: var(--font-serif); font-size: 2rem; margin-bottom: 20px; font-style: italic; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.6;">
+            "Assim como o nosso amor, este site terá atualizações e nunca irá acabar..."
+        </p>
+        <p style="font-size: 1.05rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 40px auto; line-height: 1.6;">
+            Nossa história continua sendo escrita todos os dias, então aguarde por novas atualizações e novas memórias por aqui.
+        </p>
         <button class="btn-premium" onclick="triggerSurprise(event)">Clique aqui ❤️</button>
     </section>
 
@@ -355,37 +379,90 @@
         setInterval(atualizarContador, 1000);
         atualizarContador();
 
-        // --- INTERAÇÃO DOS CARDS DE MOTIVOS ---
+            // --- INTERAÇÃO DOS CARDS DE MOTIVOS (APENAS UM ABERTO POR VEZ) ---
         function toggleCard(card) {
+            // Procura todos os cards do site e remove a classe 'active' deles, 
+            // exceto daquele que você acabou de clicar
+            document.querySelectorAll('.card').forEach(c => { 
+                if (c !== card) {
+                    c.classList.remove('active'); 
+                }
+            });
+
+            // Abre ou fecha o card clicado
             card.classList.toggle('active');
         }
 
-        // --- ANIMAÇÃO SUAVE DA CARTA (REVELAR AO SCROLL) ---
-        // --- INTERAÇÃO DOS CARDS DE MOTIVOS (ABRE E FECHA) ---
-function toggleCard(card) {
-    // Se você quiser que apenas UM card fique aberto por vez, desative a linha abaixo:
-    // document.querySelectorAll('.card').forEach(c => { if(c !== card) c.classList.remove('active'); });
+        // --- EFEITO SURPRESA PREMIUM (CORAÇÕES, BRILHOS E IMPACTO) ---
+function triggerSurprise(e) {
+    const button = e.currentTarget;
+    
+    // 1. Efeito de Tremor Suave na Tela (Impacto elegante)
+    document.body.style.transition = 'transform 0.1s ease';
+    let shakes = [
+        'translate(2px, 1px) rotate(0.5deg)',
+        'translate(-1px, -2px) rotate(-0.5deg)',
+        'translate(-3px, 0px) rotate(0deg)',
+        'translate(0px, 2px) rotate(0.5deg)',
+        'translate(1px, -1px) rotate(-0.5deg)',
+        'translate(0px, 0px) rotate(0deg)'
+    ];
+    
+    shakes.forEach((shake, index) => {
+        setTimeout(() => {
+            document.body.style.transform = shake;
+        }, index * 30);
+    });
 
-    card.classList.toggle('active');
+    // Pega a posição exata do clique para soltar os brilhos dali
+    const rect = button.getBoundingClientRect();
+    const clickX = e.clientX || (rect.left + rect.width / 2);
+    const clickY = e.clientY || (rect.top + rect.height / 2);
+
+    // 2. Explosão de Brilhos Estelares (Partindo do botão)
+    for (let i = 0; i < 20; i++) {
+        const sparkle = document.createElement('div');
+        sparkle.classList.add('sparkle-particle');
+        sparkle.innerHTML = '✨';
+        sparkle.style.left = clickX + 'px';
+        sparkle.style.top = clickY + 'px';
+        
+        // Direções aleatórias para a explosão
+        const destinationX = (Math.random() - 0.5) * 300;
+        const destinationY = (Math.random() - 0.5) * 300;
+        sparkle.style.setProperty('--x', `${destinationX}px`);
+        sparkle.style.setProperty('--y', `${destinationY}px`);
+        
+        sparkle.style.fontSize = (Math.random() * 12 + 10) + 'px';
+        sparkle.style.animationDuration = (Math.random() * 0.8 + 0.6) + 's';
+
+        document.body.appendChild(sparkle);
+        setTimeout(() => sparkle.remove(), 1400);
+    }
+
+    // 3. Chuva de Corações Flutuantes (Subindo pela tela toda)
+    for (let i = 0; i < 40; i++) {
+        setTimeout(() => {
+            const heart = document.createElement('div');
+            heart.classList.add('floating-heart');
+            
+            // Alterna entre corações vermelhos e brancos discretos
+            heart.innerHTML = Math.random() > 0.3 ? '❤️' : '🤍';
+            
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.fontSize = (Math.random() * 22 + 12) + 'px';
+            
+            // Velocidades e rotações orgânicas
+            const duration = Math.random() * 2.5 + 2;
+            heart.style.animationDuration = duration + 's';
+            heart.style.filter = `blur(${Math.random() * 0.8}px)`; // Dá profundidade de câmera profissional
+            
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), duration * 1000);
+        }, i * 60); // Cria um fluxo contínuo e suave
+    }
 }
-        // --- EFEITO SURPRESA (CORAÇÕES ANIMADOS) ---
-        function triggerSurprise(e) {
-            for (let i = 0; i < 35; i++) {
-                setTimeout(() => {
-                    const heart = document.createElement('div');
-                    heart.classList.add('floating-heart');
-                    heart.innerHTML = '❤️';
-                    heart.style.left = Math.random() * 100 + 'vw';
-                    heart.style.fontSize = (Math.random() * 20 + 15) + 'px';
-                    heart.style.animationDuration = (Math.random() * 2 + 1.5) + 's';
-                    
-                    document.body.appendChild(heart);
-                    
-                    // Remove do DOM após a animação acabar
-                    setTimeout(() => heart.remove(), 3500);
-                }, i * 80);
-            }
-        }
+
 
         // --- FUNDO DE PARTÍCULAS SUTIS (CANVAS) ---
         const canvas = document.getElementById('canvas-particles');
@@ -444,6 +521,45 @@ function toggleCard(card) {
 
         initParticles();
         animateParticles();
+
+        // --- SISTEMA DA BRINCADEIRA (BOTÃO SIM/NÃO) ---
+let contadorCliquesNao = 0;
+
+function respostaNao() {
+    const btnNao = document.getElementById('btn-nao');
+    contadorCliquesNao++;
+
+    if (contadorCliquesNao === 1) {
+        btnNao.innerText = 'Como assim? 🤨';
+    } else if (contadorCliquesNao === 2) {
+        btnNao.innerText = 'Tem certeza disso? 💔';
+    } else if (contadorCliquesNao === 3) {
+        // Altera o texto uma última vez e faz o botão sumir suavemente
+        btnNao.innerText = 'Você não tem opção! 🤣';
+        btnNao.style.pointerEvents = 'none'; // Impede novos cliques
+        
+        setTimeout(() => {
+            btnNao.style.opacity = '0';
+            setTimeout(() => {
+                btnNao.style.display = 'none';
+            }, 300);
+        }, 1000); // Espera 1 segundo para ela ler e depois esconde
+    }
+}
+
+function respostaSim() {
+    const msgAmor = document.getElementById('mensagem-amor');
+    const btnNao = document.getElementById('btn-nao');
+    
+    // Mostra a mensagem de amor
+    msgAmor.classList.add('show');
+    
+    // Caso o botão "Não" ainda esteja na tela, faz ele sumir já que ela aceitou
+    if (btnNao) {
+        btnNao.style.opacity = '0';
+        setTimeout(() => btnNao.style.display = 'none', 300);
+    }
+}
     </script>
 </body>
 </html>
