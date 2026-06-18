@@ -14,28 +14,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-   <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
-<script>
-  window.OneSignal = window.OneSignal || [];
-  
-  // Aguarda o OneSignal estar totalmente carregado antes de mexer nele
-  OneSignal.push(async function() {
-    await OneSignal.init({
-      appId: "1c1d343d-1420-476c-9cc2-981723b5b65d",
-      notifyButton: {
-        enable: false,
-      },
-    });
-
-    // Pede a permissão logo em seguida de forma segura
-    try {
-      await OneSignal.showNativePrompt();
-    } catch (error) {
-      console.log("Erro ao abrir o aviso de notificação:", error);
-    }
-  });
-</script>
-    
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="style.css">
 </head>
