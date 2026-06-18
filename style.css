@@ -136,6 +136,50 @@
             }
         }
 
+
+.btn-close-notification {
+    position: absolute;
+    right: 0;
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.notification-body p {
+    font-size: 0.85rem;
+    color: #e2e8f0;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Animação do sininho balançando */
+@keyframes ringBell {
+    0%, 100% { transform: rotate(0); }
+    10% { transform: rotate(15deg); }
+    20% { transform: rotate(-10deg); }
+    30% { transform: rotate(5deg); }
+    40% { transform: rotate(-5deg); }
+}
+
+/* Ajuste Mobile */
+@media (max-width: 480px) {
+    .notification-toast {
+        top: auto;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        width: calc(100% - 40px);
+        transform: translateY(150px);
+        transition: transform 0.5s ease;
+    }
+    .notification-toast.show {
+        transform: translateY(0);
+        right: 20px;
+    }
+}
+
         /* --- LINHA DO TEMPO --- */
         .timeline {
             position: relative;
