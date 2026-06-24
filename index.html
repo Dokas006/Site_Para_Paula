@@ -16,6 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="style.css">
+    <script src="notificacao.js"></script>
 </head>
 <body>
   
@@ -309,6 +310,7 @@
             Cada melodia e cada letra parece ter sido escrita sob medida para contar um pedacinho do que sinto por você.
         </p>
 
+
         <div class="music-grid">
             <a href="https://www.youtube.com/watch?v=9bgyuqM4LcU" target="_blank" class="music-card">
                 <div class="album-cover-wrapper">
@@ -588,6 +590,15 @@ function respostaSim() {
     }
 
    
+}
+
+// Pede permissão para mandar notificações assim que a página abre
+if (Notification.permission === 'default') {
+  Notification.requestPermission().then(permission => {
+    if (permission === 'granted') {
+      console.log('Permissão concedida!');
+    }
+  });
 }
     </script>
 </body>
